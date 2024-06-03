@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed Selector</title>
+    <link rel="stylesheet" href="breed-selector.component.css">
+</head>
+<body>
+  <app-navbar></app-navbar>
+  <div class="container">
+    <div class="breed-selector">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-secondary" id="dropdownBasic1" ngbDropdownToggle>
+          {{ selectedBreed || 'Select Breed' }}
+        </button>
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem *ngFor="let breed of breeds" (click)="onBreedSelect(breed)">
+            {{ breed }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="image-gallery">
+      <div *ngIf="isLoading" class="loading-container">
+        <p>Loading...</p>
+        <div class="spinner"></div>
+      </div>
+      <div *ngIf="!isLoading">
+        <div >
+          <img [src]="images" alt="Dog Image" class="dog-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

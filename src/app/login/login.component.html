@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="text-container">
+                <h2 class="welcome-text">Welcome Dog API</h2>
+            </div>
+            <div class="image-container">
+              <img src="../assets/loko/dog2.png" alt="Welcome Image">
+          </div>
+          <div class="button-container">
+            <!-- เรียกฟังก์ชัน login() เมื่อคลิกที่ปุ่ม "Login" -->
+            <button class="login-button" (click)="login()">Login</button>
+            <!-- เรียกฟังก์ชัน register() เมื่อคลิกที่ปุ่ม "Register" -->
+            <button class="register-button" (click)="register()">Register</button>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

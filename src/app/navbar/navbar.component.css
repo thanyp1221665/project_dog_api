@@ -1,0 +1,96 @@
+
+nav {
+  padding: 10px;
+  margin-top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px; /* ปรับขนาด padding ให้เหมาะสม */
+}
+
+.navbar {
+  position: relative;
+  top: -25px; /* ปรับค่าได้ตามต้องการ */
+}
+.navbar-brand{
+  margin-top: 90px;
+}
+.navbar-toggler-icon {
+  order: -1;
+  border: #ffffff;
+  background-color: #ffffff;
+}
+
+.navbar-custom {
+  background-color: #000000; /* เปลี่ยนสีพื้นหลังของ Navbar เป็นสีดำ */
+  border-color: #000000; /* เปลี่ยนสีขอบของ Navbar เป็นสีดำ */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ทำให้ไอเทมใน Navbar ชิดซ้าย */
+  width: 100%;
+}
+
+.navbar-brand {
+  text-align: left; /* ชิดซ้าย */
+  margin-right: 25px; /* เพิ่ม margin เพื่อเว้นระยะห่าง */
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: flex-start; /* ชิดซ้าย */
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav > li > a {
+  color: #ffffff; /* เปลี่ยนสีข้อความใน Navbar เป็นสีขาว */
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-nav > li > a:hover {
+  color: #cccccc; /* เปลี่ยนสีข้อความเมื่อ hover เป็นสีเทาอ่อน */
+}
+
+.navbar-custom .nav-link.disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li a {
+    .navbar-brand{
+      margin: 0 auto;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul li a {
+      padding: 20px;
+    }
+  .nav-link{
+    margin-right: -15px;
+  }
+}
+}

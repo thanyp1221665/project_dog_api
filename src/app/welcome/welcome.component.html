@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="welcome.component.css">
+</head>
+<body>
+  <app-navbar></app-navbar>
+  <div class="welcome-content">
+    <h1 class="welcome-title">
+      Welcome to {{ title }}!
+    </h1>
+    <div class="image-container">
+      <div *ngIf="isLoading" class="loading-container">
+        <p>Loading...</p>
+        <div class="spinner"></div>
+      </div>
+      <img *ngIf="!isLoading" [src]="dogImage" alt="Random Dog Image" class="dog-image">
+      <br>
+      <button (click)="refreshImage()">Load New Image</button>
+      <br>
+    </div>
+  </div>
+</body>
+</html>
